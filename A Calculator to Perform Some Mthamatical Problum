@@ -1,0 +1,434 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<windows.h>
+#include<math.h>
+main()
+{
+    int choice,a,b,c;
+    float d=3.14,e,x,y,z,p;
+      while(1)
+   {
+    system("cls");
+     system("color 64");
+    printf("\n1.Addition And Subtraction");
+    printf("\n2.Even or Odd");
+    printf("\n3.Check Largest Number Between 3 Numbers");
+    printf("\n4.Swiping Two Numbers");
+    printf("\n5.Converting Celsius And Fehrenhiet");
+    printf("\n6.Print Natural And Whole Number");
+    printf("\n7.Print Table Of Any Number");
+    printf("\n8.All Geometrical calculation\n");
+    printf("\n9.Exit\n");
+    printf("\n\nChoose a Option\n");
+    scanf("%d",&choice);
+    switch(choice)
+         {
+             case 1:
+                 system("color 71");
+                printf("\n1.Addition");
+                printf("\n2.Subtraction");
+                printf("\n\nChoose a Option\n");
+                scanf("%d",&choice);
+                switch(choice)
+                {
+                case 1:
+                    system("color e0");
+                    printf("Enter Two Number\n");
+                    scanf("%d%d",&a,&b);
+                    c=a+b;
+                    printf("Sum=%d",c);
+                    break;
+                case 2:
+                    system("color 84");
+                    printf("Enter Two Number\n");
+                    scanf("%d%d",&a,&b);
+                    c=a-b;
+                    printf("Subtraction=%d",c);
+                    break;
+               default:
+                system("color 64");
+                printf("Invalid Choice");
+                break;
+                }
+                break;
+            case 2:
+                 system("color a1");
+                 printf("Enter a Number\t");
+                 scanf("%d",&a);
+                 a%2==0?printf("Even Number"):printf("Odd number");
+                 break;
+           case 3:
+               system("color f4");
+               printf("enter any three numbers");
+               scanf("%d%d%d",&a,&b,&c);
+               if((a!=b)&&(b!=c))
+               {
+                   if((a>b)&&(a>c))
+                   {
+                       printf("%d is greater number",a);
+                   }
+                     if((b>a)&&(b>c))
+                   {
+                       printf("%d is greater number",b);
+                   }
+                     if((c>b)&&(c>a))
+                   {
+                       printf("%d is greater number",c);
+                   }
+               }
+               if((a==b)&&(b==c))
+                  {
+                      printf("all numbers are equal");
+                  }
+                  else
+                  {
+                      if((a==b)&&(b!=c))
+                      {
+                          if(b>c)
+                          {
+                              printf("%d and %d is greater number",a,b);
+                          }
+                          else
+                          {
+                              printf("%d is greater number",c);
+                          }
+                      }
+                      if((b==c)&&(c>a))
+                      {
+                          if(c>a)
+                          {
+                              printf("%d and %d is greater number",b,c);
+                          }
+                          else
+                          {
+                            printf("%d is greater number",a);
+                          }
+                      }
+                      if((c==a)&&(a!=b))
+                      {
+                          if(a>b)
+                          {
+                              printf("%d and %d is  greater number",a,c);
+                          }
+                          else
+                          {
+                              printf("%d is greater number",b);
+                          }
+                      }
+
+                  }
+                break;
+           case 4:
+               system("color b1");
+               printf("Enter Two Number\n");
+               scanf("%d%d",&a,&b);
+               printf("A=%d\nB=%d\n",a,b);
+               a=a+b;
+               b=a-b;
+               a=a-b;
+               printf("After Swiping number \n\na=%d\nb=%d",a,b);
+               break;
+           case 5:
+               system("color 14");
+               printf("\n1.Fehrenhiet To Celsius");
+               printf("\n2.Celsius To Fehrenhiet");
+               printf("\n\n Choose a Option\t");
+               scanf("%d",&choice);
+               switch(choice)
+               {
+               case 1:
+                system("color e6");
+                printf("Enter The Fehrenhiet Value\n");
+                scanf("%f",&x);
+                e=(float)(x-32)*5/9;
+                printf("Celsius=%f",e);
+                break;
+              case 2:
+                system("color c1");
+                printf("Enter The Celsius Value\n");
+                scanf("%d",&x);
+                e=(x*9/5)+32;
+                printf("Fehrenhiet=%f",e);
+                break;
+             default:
+                system("color 64");
+                printf("Invalid Choice");
+                break;
+                } break;
+              case 6:
+                  system("color c7");
+                  printf("\n1.N Natural Number\n");
+                  printf("\n2.N Whole Number\n");
+                  printf("Choose a Option\t");
+                  scanf("%d",&choice);
+                  switch(choice)
+                  {
+                  case 1:
+                    system("color e5");
+                    printf("Enter The Number\t");
+                    scanf("%d",&a);
+                    for(b=1;b<=a;b++)
+                      {
+                        printf("%d\n",b);
+                       }
+                       break;
+                  case 2:
+                     system("color f0");
+                     printf("Enter The Number\t");
+                     scanf("%d",&a);
+                     for(b=0;b<a;b++)
+                      {
+                        printf("%d\n",b);
+                       }
+                       break;
+                default:
+                     system("color 64");
+                     printf("Invalid Choice");
+                     break;
+                     }
+                  break;
+            case 7:
+                system("color a5");
+                printf("Enter A Number\n");
+                scanf("%d",&a);
+                for(b=1;b<=10;b++)
+                {
+                    c=a*b;
+                    printf("%d*%d=%d\n",a,b,c);
+                }
+                break;
+            case 8:
+                printf("\n1.Find the Area and perimeter of Square");
+                printf("\n2.Find the Area and perimeter of Rectangle");
+                printf("\n3.Find the Area and Circumference of Circle");
+                printf("\n4.Find the Area and perimeter of Trapezoid");
+                printf("\n5.Find the volume and Surface Area  of Rectangular solid");
+                printf("\n6.Find the volume and Surface Area of Cube");
+                printf("\n7.Find the volume and Surface Area of Cone");
+                printf("\n8.Find the volume and Surface Area of Sphere\n");
+                printf("\nchoose a option\n");
+                scanf("%d",&choice);
+                switch(choice)
+                  {
+                    case 1:
+                      system("color 9c");
+                      printf("\n1.find area of square");
+                      printf("\n2.find the perimeter of square\n");
+                      scanf("%d",&choice);
+                      switch(choice)
+                       {
+                        case 1:
+                            system("color 59");
+                            printf("enter the value of side\t");
+                            scanf("%f",&x);
+                            p=x*x;
+                            printf("area=%f",p);
+                            break;
+                        case 2:
+                            system("color 25");
+                            printf("enter the value of side\t");
+                            scanf("%f",&x);
+                            p=4*x;
+                            printf("perimeter=%f",p);
+                            break;
+                       default:
+                            system("color 64");
+                            printf("Invalid Choice");
+                            break;
+                            }
+                       break;
+                 case 2:
+                      system("color f6");
+                      printf("\n1.find area of Rectangle");
+                      printf("\n2.find the perimeter of Rectangle\n");
+                      scanf("%d",&choice);
+                      switch(choice)
+                        {case 1:
+                            system("color 2d");
+                            printf("enter the value of  Length and Width\t");
+                            scanf("%f%f",&x,&y);
+                            p=x*y;
+                            printf("area=%f",p);
+                            break;
+                        case 2:
+                            system("color de");
+                            printf("enter the value of  Length and Width\t");
+                            scanf("%f%f",&x,&y);
+                            p=2*(x+y);
+                            printf("perimeter=%f",p);
+                            break;
+                       default:
+                           system("color 64");
+                           printf("Invalid Choice");
+                           break;
+                           }
+                        break;
+                case 3:
+                      system("color cf");
+                      printf("\n1.find area of Circle");
+                      printf("\n2.find the Circumference of Circle\n");
+                      scanf("%d",&choice);
+                      switch(choice)
+                        {case 1:
+                            system("color f5");
+                            printf("enter the value of radius \t");
+                            scanf("%f",&x);
+                            e=d*(x*x);
+                            printf("area=%f",e);
+                            break;
+                        case 2:
+                            system("color cb");
+                            printf("enter the value of radius\t");
+                            scanf("%f",&x);
+                            e=2*d*x;
+                            printf("Circumference=%f",e);
+                            break;
+                       default:
+                           system("color 1c");
+                           printf("Invalid Choice");
+                           break;
+                           }
+                        break;
+                case 4:
+                    system("color c7");
+                      printf("\n1.find area of Trapezoid");
+                      printf("\n2.find the Circumference of Trapezoid\n");
+                      scanf("%d",&choice);
+                      switch(choice)
+                        {case 1:
+                            system("color d9");
+                            printf("enter the value of two base and hight of Trapezoid\n");
+                            scanf("%f%f%f",&x,&y,&z);
+                            e=((x+y)*z)/2;
+                            printf("area=%f",e);
+                            break;
+                        case 2:
+                            system("color f9");
+                            printf("enter the value of all 4 sides of Trapezoid\n");
+                            scanf("%f%f%f%f",&x,&y,&z,&p);
+                            e=(x+y+z+p);
+                            printf("perimeter=%f",e);
+                            break;
+                       default:
+                           system("color c1");
+                           printf("Invalid Choice");
+                           break;
+                           }
+                        break;
+                 case 5:
+                      system("color c7");
+                      printf("\n1.find the volume of Rectangular solid");
+                      printf("\n2.find the Surface Area of Rectangular solid\n");
+                      scanf("%d",&choice);
+                      switch(choice)
+                        {case 1:
+                            system("color ce");
+                            printf("enter the value of Length Width and Height of Rectangular solid \n");
+                            scanf("%f%f%f",&x,&y,&z);
+                            e=x*y*z;
+                            printf("volume=%f",e);
+                            break;
+                        case 2:
+                            system("color ec");
+                            printf("enter the value of Length Width and Height of Rectangular solid \n");
+                            scanf("%f%f%f",&x,&y,&z);
+                            e=2*(x*y+x*z+y*z);
+                            printf("Surface Area=%f",e);
+                            break;
+                       default:
+                           system("color c2");
+                           printf("Invalid Choice");
+                           break;
+                           }
+                        break;
+                 case 6:
+                      system("color 37");
+                      printf("\n1.find the volume of cube");
+                      printf("\n2.find the Surface Area of cube\n");
+                      scanf("%d",&choice);
+                      switch(choice)
+                        {case 1:
+                            system("color b1");
+                            printf("enter the value of side \n");
+                            scanf("%f",&x);
+                            e=x*x*x;
+                            printf("volume=%f",e);
+                            break;
+                        case 2:
+                            system("color 4b");
+                            printf("enter the value of side\n");
+                            scanf("%f",&x);
+                            e=6*(a*a);
+                            printf("Surface Area=%f",e);
+                            break;
+                       default:
+                           system("color 6c");
+                           printf("Invalid Choice");
+                           break;
+                           }
+                        break;
+                 case 7:
+                      system("color 9f");
+                      printf("\n1.find the volume of cone");
+                      printf("\n2.find the Surface Area of cone\n");
+                      scanf("%d",&choice);
+                      switch(choice)
+                        {case 1:
+                            system("color a9");
+                            printf("enter the value of height and redius \n");
+                            scanf("%f%f",&x,&y);
+                            e=(d*(y*y)*x)/3;
+                            printf("volume=%f",e);
+                            break;
+                        case 2:
+                            system("color d9");
+                            printf("enter the value of side and redius \n");
+                            scanf("%f%f",&x,&y);
+                            e=d*x*y;
+                            printf("Surface Area=%f",e);
+                            break;
+                       default:
+                           system("color c9");
+                           printf("Invalid Choice");
+                           break;
+                           }
+                        break;
+                 case 8:
+                      system("color 97");
+                      printf("\n1.find the volume of Sphere");
+                      printf("\n2.find the Surface Area of Sphere\n");
+                      scanf("%d",&choice);
+                      switch(choice)
+                        {case 1:
+                            system("color 59");
+                            printf("enter the value of redius \n");
+                            scanf("%f",&x);
+                            e=(4*d*(x*x*x))/3;
+                            printf("volume=%f",e);
+                            break;
+                        case 2:
+                            system("color 85");
+                            printf("enter the value of redius \n");
+                            scanf("%f",&x);
+                            e=4*d*(x*x);
+                            printf("Surface Area=%f",e);
+                            break;
+                       default:
+                           system("color 48");
+                           printf("Invalid Choice");
+                           break;
+                           }
+                        break;
+                    }
+                    break;
+            case 9:
+                    exit(1);
+              default:
+                system("color 64");
+                printf("Invalid Choice");
+           break;
+         }
+   getch();
+   }
+}
