@@ -1,0 +1,139 @@
+<!doctype>
+<html>
+<head><title> website </title>
+<body>
+   <header>
+   <div class="row">
+       <div class="logo">
+          <img src="pic.png">
+          <ul>
+            <li><a href="#"class="active">HOME</a></li>
+            <li><a href="MY SKILLS.HTML">MY SKILLS</a></li>
+            <li><a href="#">MY PROJECT</a></li>
+            <li><a href="#">GALLARY</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+    </div>
+    <div class="name">
+      <h3> <b>Dharmendra kumar</b> </h3>
+      
+    </div>
+    <div class="tittle">
+<h1>CREATIVE DEVELOPER</h1>
+   <h4>PROGRAMMER</h4>
+ </div>
+</div>
+</header>
+<style>
+body{
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("teach.jpg");
+  background-size:cover;
+  background-position: center;
+  background-attachment:fixed;
+}
+.logo img
+{
+  float: left;
+  width:140px;
+  padding-left:20px;
+  height:auto;
+  box-shadow: 10px 5px 8px;
+  border-radius:90px;
+  animation:dhruv 2s infinite alternate;  
+}
+@keyframes dhruv{
+
+  from{border-radius: 0px;}
+  to{border-radius: 90px;
+  transform-rotate:(-50deg);}
+}
+ul{
+   margin-top:25px;
+  list-style: none;
+  float: right;
+}
+ul li{
+
+   display: inline-block;
+}
+ul li a{
+   text-decoration: none;
+   color:white;
+   padding: 5px 8px;
+   border-radius:5px;
+   font-family:Fantasyr;
+}
+ul li a:hover{
+
+   background-color: white;
+   color:black;
+   transition:0.6s ease;
+}
+ul li a.active
+{
+  background-color: white;
+   color:black;
+   transition:0.6s ease;
+}
+.tittle{
+  position: absolute;
+  top:50%;
+  left: 40%;
+  transform: translate(-50px,-50px);
+}
+.tittle h1{
+   color: white;
+   font-family:Copperplate Gothic Bold;
+   animation: my 3s infinite alternate;
+   padding-left:0px;
+}
+@keyframes my{
+
+  from{font-size:30px;
+    color:white;}
+  to{font-size:50px;
+    color:gray;}
+} 
+ .name h3{
+   color: white;
+   font-family: Georgia;
+   font-size:20px;
+   padding-top:120px;
+   position:absolute;
+   animation: clr 1s infinite alternate;
+}
+@keyframes clr{
+
+  from{
+    color:white;
+  }
+  to{
+    color:blue;}
+  }
+.tittle h4{
+   color:white;
+   font-family: Georgia;
+   padding-left: 110px;
+   font-size: 15px;
+   margin:0px;
+   animation: tp 3s infinite alternate;
+}
+@keyframes tp{
+
+  from{
+    font-size:10px;
+    color:white;
+  }
+  to{
+
+    font-size:30px;
+    color:gray;
+  }
+}
+.row{
+   max-width: 1200px;
+   margin:auto;
+}
+</style>
+</body>
+</head></html>
